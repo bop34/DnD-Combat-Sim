@@ -1,0 +1,22 @@
+=======================================================
+Ideas for new features:
+  - [Idea] (Difficulty to implement)
+  - Finishing the game. (Medium)
+  - Adding the random mobs. (Easy)
+  - Mobs that take up multiple spaces. (Extremely hard)
+  	Currently the game engine does not have this included,
+  	and it would require a major rewrite to add
+  - Ranged attacks. (Easy)
+  - Better pathfinding. (Unsure)
+  - Local multiplayer. (Easy)
+  - Difficulty for prebuit mobs. (Easy)
+  - Difficulty for random mobs (Easy)
+  - Mob swarm mode: Weak mobs, but there are a lot (Easy)
+  - Randomized mob swarms. (Easy, but time consuming)
+    Just imagine a swarm of randomly selected,
+    prebuilt or randomized mobs, attacking you
+  - Randomized mobs should have randomly generated,
+  	yet realistic, names and a random icon (Very Easy)
+
+	Feel free to suggest things on Github
+=======================================================
