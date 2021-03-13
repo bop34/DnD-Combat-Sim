@@ -48,7 +48,7 @@ class Mob():
                 self.canAttack = True
             else:
                 self.canAttack = False
-                print('--> Attack failed. Please report an issue on github with a screenshot detailed information if the error continues')
+                print('--> Attack failed. Please report an issue on github with a screenshot and detailed information if the error continues')
         else:
             self.canAttack = True
 
@@ -122,7 +122,7 @@ class Mob():
             self.nextMove = 'x'
             self.goalx = self.x
         else:
-            print('--> The pathfinding failed due to RAM corruption')            
+            print('--> The pathfinding failed due to RAM corruption')
             print('--> It will try to fix itself, but if the issue continues, please report it on Github with a screenshot')
             if random.randint(1,2) == 1:
                 self.nextMove = 'x'

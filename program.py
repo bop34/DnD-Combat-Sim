@@ -52,10 +52,10 @@ while True:
     # Open the start screen---------
     print(optScreen)
     startOption = input('--> ')
-    if startOption == '1': # Default monsters
+    if startOption == '1':# Default monsters
         Mob.entities['1'] = Mob("Spider", '1', 5, 10, 1, 1, 10,char='T',speed=6)
         startgm = True
-    elif startOption == '2': # Monster creator
+    elif startOption == '2':# Monster creator
         while True:
             mapVal = str(len(Mob.entities)-1)
             opName = input('Name--> ')
@@ -102,36 +102,43 @@ while True:
                     print('--> That is not an option')
                     br = False
                     pass
-            if br:
+            if br:# Break monster creator
                 br = False
+                Mob.entities = {}
                 break
     
-    elif startOption == '3':
+    elif startOption == '3':#Random monster
         print('Coming soon')
-    elif startOption == '4':
+    elif startOption == '4':#Weak monsters
         print('Coming soon')
-    elif startOption == '5':
+    elif startOption == '5':#Future options
         print(future)
-    elif startOption == '6':
+    elif startOption == '6':#Credits
         print(credits)
-    elif startOption == '7':
+    elif startOption == '7':#Quit
         break
     #-----------------------------
 
     #Game loop
     if startgm:
-        
+        pDead = False
         while True:
-            doMap()
+            if len(Mob.entities) <= 0:#Check if only one mob is left or if the player is dead
+                startgm = False
+                break
+        
+            doMap()#Push and Print map
             for name,obj in Mob.entities.items():
                 dumPlaceholder = name
                 print(obj)
             # Player turn--------------
             playerturn = True
             p = Mob.entities['p']
-            if p.checkDeath():
+            if p.checkDeath():# Check if player is dead
                 print('--> Game over!')
+                startgm = False
                 break
+            
             mvT = p.speed
             options = ['Move','Attack','End your turn']
             
@@ -241,4 +248,5 @@ while True:
             
 
 
-print('--> Closing program')
+print('--> Thanks for playing!')
+input()
