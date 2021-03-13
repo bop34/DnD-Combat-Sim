@@ -123,7 +123,7 @@ while True:
     if startgm:
         pDead = False
         while True:
-            if len(Mob.entities) <= 0:#Check if only one mob is left or if the player is dead
+            if len(Mob.entities) <= 1:#Check if only one mob is left or if the player is dead
                 startgm = False
                 break
         
@@ -205,9 +205,9 @@ while True:
                         print('%s] %s' % (num,i.name))
                         num +=1
                     while True:
-                        attackOp = input('--> ')
+                        attackOp = int(input('--> '))-1
                         try:
-                            if bool(attackOptions[int(attackOp)]):
+                            if bool(attackOptions[attackOp]):
                                 break
                         except:
                             print('--> Please enter a valid response')
